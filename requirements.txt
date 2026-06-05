@@ -1,0 +1,55 @@
+# ============================================================
+# Chatbot Administratif pour Étrangers en France
+# Système RAG + LLM — Fichier des dépendances Python
+# ============================================================
+# Généré pour Python 3.9+
+# Installation : pip install -r requirements.txt
+# ============================================================
+
+# ----- Deep Learning & Modèles de Langage -----
+torch>=2.0.0                    # Framework PyTorch (CPU suffisant pour ce projet)
+transformers>=4.40.0            # Modèles HuggingFace (BERT, RoBERTa, T5, etc.)
+sentence-transformers>=2.7.0    # Embeddings sémantiques multilingues
+accelerate>=0.30.0              # Accélération des modèles HuggingFace
+einops>=0.7.0                   # Opérations tensorielles (requis par certains modèles)
+huggingface_hub>=0.23.0         # Téléchargement de modèles HuggingFace
+
+# ----- Recherche Vectorielle (RAG) -----
+faiss-cpu>=1.8.0                # Index vectoriel FAISS (version CPU)
+# faiss-gpu>=1.8.0              # Décommenter si GPU disponible (CUDA)
+
+# ----- LangChain (orchestration RAG) -----
+langchain>=0.2.0
+langchain-community>=0.2.0
+langchain-huggingface>=0.0.3
+langchain-text-splitters>=0.2.0
+
+# ----- Traitement du Langage Naturel (NLP) -----
+nltk>=3.8.1                     # Tokenisation, stopwords, BLEU score
+datasets>=2.19.0                # Chargement de datasets HuggingFace
+
+# ----- Évaluation des Modèles -----
+rouge-score>=0.1.2              # Métriques ROUGE (ROUGE-1, ROUGE-2, ROUGE-L)
+sacrebleu>=2.4.0                # Métriques BLEU standardisées
+
+# ----- Science des Données & Calcul -----
+numpy>=1.24.0
+pandas>=2.0.0
+scikit-learn>=1.4.0             # PCA, t-SNE, cosine_similarity
+
+# ----- Visualisation -----
+matplotlib>=3.8.0
+seaborn>=0.13.0
+plotly>=5.20.0                  # Graphiques interactifs
+wordcloud>=1.9.3                # Nuages de mots
+
+# ----- Interface Jupyter -----
+ipywidgets>=8.1.0               # Interface conversationnelle interactive
+jupyterlab>=4.0.0               # Environnement notebook recommandé
+notebook>=7.0.0                 # Support Jupyter Notebook classique
+ipython>=8.0.0
+
+# ----- Utilitaires Généraux -----
+tqdm>=4.66.0                    # Barres de progression
+requests>=2.31.0                # Requêtes HTTP (web scraping optionnel)
+beautifulsoup4>=4.12.0          # Parsing HTML (collecte de données)
