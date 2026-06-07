@@ -1,10 +1,10 @@
-# 🤖 Chatbot Administratif — Assistance aux Étrangers en France
+#  Chatbot Administratif — Assistance aux Étrangers en France
 
 > Système intelligent de questions-réponses basé sur une architecture **RAG (Retrieval-Augmented Generation)** combinant FAISS, Sentence Transformers et des modèles de langage HuggingFace. Conçu pour guider les étrangers dans leurs démarches administratives en France.
 
 ---
 
-## 📋 Sommaire
+##  Sommaire
 
 1. [Contexte et problématique](#-contexte-et-problématique)
 2. [Architecture du système](#-architecture-du-système)
@@ -24,7 +24,7 @@
 
 ---
 
-## 🎯 Contexte et problématique
+##  Contexte et problématique
 
 Les étrangers résidant ou souhaitant s'installer en France font face à des procédures administratives souvent complexes, longues et difficiles à appréhender, en particulier pour les personnes ne maîtrisant pas parfaitement la langue française. Les démarches concernées incluent notamment :
 
@@ -43,7 +43,7 @@ Les étrangers résidant ou souhaitant s'installer en France font face à des pr
 
 ---
 
-## 🏗️ Architecture du système
+##  Architecture du système
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -77,7 +77,7 @@ Les étrangers résidant ou souhaitant s'installer en France font face à des pr
 
 ---
 
-## ✨ Fonctionnalités
+##  Fonctionnalités
 
 ### Chatbot
 - **Détection automatique de l'intention** : classification par mots-clés en 9 catégories (titre de séjour, visa, asile, santé, travail, logement, études, naturalisation, famille)
@@ -103,7 +103,7 @@ Les étrangers résidant ou souhaitant s'installer en France font face à des pr
 
 ---
 
-## 📁 Structure du projet
+##  Structure du projet
 
 ```
 chatbot-admin-etrangers/
@@ -127,7 +127,7 @@ chatbot-admin-etrangers/
 
 ---
 
-## 💻 Prérequis
+##  Prérequis
 
 | Élément | Minimum recommandé |
 |---|---|
@@ -141,7 +141,7 @@ chatbot-admin-etrangers/
 
 ---
 
-## 🚀 Installation
+##  Installation
 
 ### Option A — Environnement virtuel local (recommandé)
 
@@ -192,7 +192,7 @@ jupyter lab
 
 ---
 
-## ▶️ Lancement du notebook
+##  Lancement du notebook
 
 Une fois l'environnement installé et Jupyter ouvert :
 
@@ -200,11 +200,11 @@ Une fois l'environnement installé et Jupyter ouvert :
 2. Aller dans le menu **Kernel → Restart & Run All** pour exécuter tout le notebook d'un coup
 3. Ou exécuter les cellules **une par une** dans l'ordre numéroté (recommandé pour comprendre chaque étape)
 
-> **Premier lancement :** les modèles HuggingFace (~500 Mo) sont téléchargés automatiquement depuis le Hub. Une connexion internet est nécessaire. Les téléchargements suivants utilisent le cache local.
+> **Premier lancement :** les modèles HuggingFace (500 Mo) sont téléchargés automatiquement depuis le Hub. Une connexion internet est nécessaire. Les téléchargements suivants utilisent le cache local.
 
 ---
 
-## 📖 Guide d'utilisation
+##  Guide d'utilisation
 
 ### Utilisation de base via l'interface Jupyter
 
@@ -254,7 +254,7 @@ chatbot.afficher_stats()
 
 ---
 
-## 📚 Données et corpus
+##  Données et corpus
 
 ### Corpus intégré
 
@@ -290,7 +290,7 @@ Après ajout, relancer les sections 4 à 6 pour reconstruire l'index FAISS.
 
 ---
 
-## 🧠 Modèles utilisés
+##  Modèles utilisés
 
 ### Modèle d'embeddings (par défaut)
 
@@ -351,30 +351,30 @@ Le notebook évalue automatiquement le chatbot sur un jeu de 6 paires question/r
 
 ### Interprétation
 
-- Score de confiance RAG > **0.6** → réponse très pertinente
-- Score de confiance RAG entre **0.3 et 0.6** → réponse acceptable
-- Score de confiance RAG < **0.3** → question hors corpus, rediriger vers les sources officielles
+- Score de confiance RAG > **0.6** -> réponse très pertinente
+- Score de confiance RAG entre **0.3 et 0.6** -> réponse acceptable
+- Score de confiance RAG < **0.3** -> question hors corpus, rediriger vers les sources officielles
 
 ---
 
-## 📊 Résultats et performances
+##  Résultats et performances
 
 Résultats typiques obtenus sur le corpus fourni (CPU, Intel Core i7) :
 
 | Métrique | Score moyen |
 |---|---|
-| Score BLEU | ~0.18 |
-| ROUGE-1 | ~0.45 |
-| ROUGE-L | ~0.38 |
-| Similarité sémantique | ~0.72 |
-| Score de confiance RAG | ~0.78 |
-| Temps de réponse | ~250 ms |
+| Score BLEU | 0.18 |
+| ROUGE-1 | 0.45 |
+| ROUGE-L | 0.38 |
+| Similarité sémantique | 0.72 |
+| Score de confiance RAG | 0.78 |
+| Temps de réponse | 250 ms |
 
 > Ces scores reflètent une génération **extractive** (le système reformule le contenu du corpus sans halluciner). L'intégration d'un LLM génératif comme Mistral améliore significativement les scores BLEU et ROUGE.
 
 ---
 
-## 🔌 Extension avec un LLM externe
+##  Extension avec un LLM externe
 
 Pour obtenir des réponses plus fluides et naturelles, voici comment brancher un LLM génératif à l'architecture RAG existante :
 
@@ -400,7 +400,7 @@ Réponse :"""
 
 ---
 
-## ⚠️ Limites et améliorations
+##  Limites et améliorations
 
 ### Limites actuelles
 
@@ -422,7 +422,7 @@ Réponse :"""
 
 ---
 
-## 🌐 Sources officielles
+##  Sources officielles
 
 Les réponses du chatbot sont basées sur les sites gouvernementaux français :
 
@@ -439,10 +439,10 @@ Les réponses du chatbot sont basées sur les sites gouvernementaux français :
 
 ---
 
-## 📄 Licence
+##  Remarques
 
 Ce projet est à vocation pédagogique. Les informations administratives présentées sont issues de sources publiques officielles françaises et ne constituent pas un conseil juridique. Pour toute situation personnelle, consultez directement les organismes compétents ou un juriste spécialisé.
 
 ---
 
-*Projet développé dans le cadre d'un cours sur les Large Language Models (LLM) — Architecture RAG appliquée aux services administratifs.*
+Projet développé dans le cadre d'un cours sur les Large Language Models (LLM) — Architecture RAG appliquée aux services administratifs.
