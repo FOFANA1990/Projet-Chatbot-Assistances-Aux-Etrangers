@@ -50,15 +50,15 @@ Les étrangers résidant ou souhaitant s'installer en France font face à des pr
 │                      PIPELINE RAG                           │
 │                                                             │
 │  Question         Recherche          Génération             │
-│  utilisateur  →   documentaire   →   de réponse             │
+│  utilisateur  ->   documentaire   ->   de réponse             │
 │                                                             │
 │  ┌──────────┐   ┌────────────────┐   ┌──────────────────┐  │
 │  │  Saisie  │   │ Sentence Trans.│   │ Générateur       │  │
-│  │ (widget  │──▶│ (embeddings    │──▶│ Template / BERT  │  │
+│  │ (widget  │──>│ (embeddings    │──>│ Template / BERT  │  │
 │  │ Jupyter) │   │  multilingues) │   │ QA / LLM externe │  │
 │  └──────────┘   └───────┬────────┘   └──────────────────┘  │
-│                         │                      ▲            │
-│                         ▼                      │            │
+│                         │                      ↑           │
+│                         ↓                      |            │
 │                  ┌─────────────┐               │            │
 │                  │ Index FAISS │───────────────┘            │
 │                  │ (vecteurs   │  Top-K chunks              │
@@ -333,7 +333,7 @@ client = Groq(api_key="votre_cle_groq")
 
 ---
 
-## 📏 Évaluation et métriques
+##  Évaluation et métriques
 
 Le notebook évalue automatiquement le chatbot sur un jeu de 6 paires question/réponse de référence.
 
